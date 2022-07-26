@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <title></title>
+    <script type="text/javascript" src="popup.js"></script>
+
+    <script src="../../lib/jquery.js"></script>
+    <script src="../../lib/Semantic-UI-CSS-master/semantic.min.js"></script>
+    <link
+      href="../../lib/Semantic-UI-CSS-master/semantic.min.css"
+      rel="stylesheet"
+    />
+    <link href="./popup.css" rel="stylesheet">
+    <style>
+      /*    
+      button {
+        padding: 10px;
+        background-color: #4c8bf5;
+        display: inline-block;
+        border-radius: 50px;
+        width: 150px;
+        height: 50px;
+        border: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        color: #ffffff;
+        outline: 0;
+        appearance: none;
+      } */
+
+      body {
+        width: 550px;
+        height: 440px;
+        padding: 10px;
+      }
+
+      /* button:active {
+        background-color: #133774;
+      } */
+    </style>
+  </head>
+  <body>
+      <div class="space new-user-stuff"></div>
+      <div class="new-user-stuff ui container centered">
+          <center>
+            <h2 class="ui header">
+              <div id="righty" class="content">
+                <img src="../../assets/proctor-128.png" width="32" alt=""/>
+                Proctor IIITA
+                <div class="sub header">Real Time Proctoring</div>
+              </div>
+            </h2>
+            <button id="sign-up" class="ui google purple button">
+              <i class="google plus icon"></i>Sign in with Google
+            </button>
+          </center>
+      </div>
+
+    <div class="old-user-stuff">
+      <h2 class="ui header">
+        <div class="content">
+          <span id="user-name"></span>
+          <div id="user-email" class="sub header"></div>
+        </div>
+      </h2>
+      <!-- <p></p> -->
+      <!-- <p></p> -->
+      <br/>
+      <div class="ui row grid">
+        <div class="ui input">
+          <input
+            id="code"
+            name="code"
+            placeholder="e.g. svnit"
+            type="text"
+          />
+        </div>
+        <button id="save" class="code-not-set ui purple basic button">Save</button
+        >
+        <button id="clear" class="code-set negative ui button">Clear</button
+          >
+      </div>
+      <div class="ui row grid">
+        <br/>
+        <h2 class="ui header">
+          <div class="content">
+            <span></span>
+            <div class="sub header">Enter your campus code</div>
+          </div>
+        </h2>
+      </div>
+      <br />
+      
+      <div class="ui toggle checkbox code-set">
+        <input type="checkbox" name="public" id="tracking">
+        <label id="tracking-message"></label>
+      </div>
+
+      <h4 class="ui header tracking-enabled code-set" id="status">
+      </h4>
+      <div class="ui relaxed list tracking-enabled code-set">
+        <div class="item item-1" style="display: none;">
+          <i class="hand point right middle aligned icon"></i>
+          <div class="content">
+            <div class="description item-1"></div>
+          </div>
+        </div>
+        <div class="item item-2" style="display: none;">
+          <i class="hand point right middle aligned icon"></i>
+          <div class="content">
+            <div class="description item-2"></div>
+          </div>
+        </div>
+        <div class="item item-3" style="display: none;">
+          <i class="hand point right middle aligned icon"></i>
+          <div class="content">
+            <div class="description item-3"></div>
+          </div>
+        </div>
+        <div class="item item-4" style="display: none;">
+          <i class="hand point right middle aligned icon"></i>
+          <div class="content">
+            <div class="description item-4"></div>
+          </div>
+        </div>
+        <div class="item item-5" style="display: none;">
+          <i class="hand point right middle aligned icon"></i>
+          <div class="content">
+            <div class="description item-5"></div>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <button id="logout" class="ui secondary button right labeled icon">
+        <i class="right arrow icon"></i>
+        Logout
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "Proctor IIITA",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "activeTab",
+
+    "identity",
+    "identity.email",
+    "tabs",
+    "downloads"
+  ],
+  "icons": { "16": "assets/proctor-16.png", "48": "assets/proctor-48.png", "128": "assets/proctor-128.png" },
+  "oauth2" : {
+      "client_id" :"207877948408-slvb7klahherfmcnc7sauhbbbvmjl4j2.apps.googleusercontent.com",
+      "scopes" : [
+          "https://www.googleapis.com/auth/userinfo.email",
+          "https://www.googleapis.com/auth/userinfo.profile"     
+      ]
+  },
+  "background": {
+    "scripts": [
+      "./lib/firebase.js",
+      "./lib/firestore.js",
+      "./src/background.js",
+      "./src/config/firebase-config.js",
+      "./src/relay.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "./src/popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./src/scripts/script.js"]
+    }
+  ],
+  "manifest_version": 2
+}
